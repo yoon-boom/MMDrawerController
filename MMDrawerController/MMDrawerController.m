@@ -403,6 +403,8 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         [self.centerContainerView setOpenSide:self.openSide];
         [self.centerContainerView setCenterInteractionMode:self.centerHiddenInteractionMode];
         [self.childControllerContainerView addSubview:self.centerContainerView];
+        
+        [self.centerContainerView addObserver:self forKeyPath:@"frame" options:0 context:NULL];
     }
   }
   
@@ -432,6 +434,11 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         [self.centerViewController endAppearanceTransition];
         [self.centerViewController didMoveToParentViewController:self];
     }
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSLog(@"");
 }
 
 -(void)setCenterViewController:(UIViewController *)newCenterViewController withCloseAnimation:(BOOL)animated completion:(void(^)(BOOL finished))completion{
