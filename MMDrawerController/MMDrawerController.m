@@ -439,10 +439,9 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
 #pragma mark - KVO for center container view panel
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] && (object == self.centerContainerView)) {
+    if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] && (object == self.centerContainerView))
         // callback
-        NSLog(@"%@", NSStringFromCGRect(self.centerContainerView.frame));
-    }
+        _callback(self.centerContainerView.frame);
 }
 
 -(void)setCenterViewController:(UIViewController *)newCenterViewController withCloseAnimation:(BOOL)animated completion:(void(^)(BOOL finished))completion{
