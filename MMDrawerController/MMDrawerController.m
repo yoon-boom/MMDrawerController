@@ -441,7 +441,9 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
 {
     if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] && (object == self.centerContainerView))
         // callback
-        _callback(self.centerContainerView.frame);
+        if (_callback) {
+            _callback(self.centerContainerView.frame);
+        }
 }
 
 -(void)setCenterViewController:(UIViewController *)newCenterViewController withCloseAnimation:(BOOL)animated completion:(void(^)(BOOL finished))completion{
