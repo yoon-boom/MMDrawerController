@@ -1421,4 +1421,10 @@ static inline CGFloat originXForDrawerOriginAndTargetOriginOffset(CGFloat origin
     return (CGRectContainsPoint(rightBezelRect, point) &&
             [self isPointContainedWithinCenterViewContentRect:point]);
 }
+
+- (void)dealloc
+{
+    [self.centerContainerView removeObserver:self forKeyPath:NSStringFromSelector(@selector(frame))];
+}
+
 @end
