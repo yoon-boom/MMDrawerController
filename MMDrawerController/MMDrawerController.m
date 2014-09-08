@@ -404,7 +404,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         [self.centerContainerView setCenterInteractionMode:self.centerHiddenInteractionMode];
         [self.childControllerContainerView addSubview:self.centerContainerView];
         
-        [self.centerContainerView addObserver:self forKeyPath:@"frame" options:0 context:NULL];
+        [self.centerContainerView addObserver:self forKeyPath:NSStringFromSelector(@selector(frame)) options:0 context:NULL];
     }
   }
   
@@ -436,9 +436,13 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
     }
 }
 
+#pragma mark - KVO for center container view panel
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"");
+    if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] && (object == self.centerContainerView)) {
+        // callback
+        NSLog(@"%@", NSStringFromCGRect(self.centerContainerView.frame));
+    }
 }
 
 -(void)setCenterViewController:(UIViewController *)newCenterViewController withCloseAnimation:(BOOL)animated completion:(void(^)(BOOL finished))completion{
