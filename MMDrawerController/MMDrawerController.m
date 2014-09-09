@@ -1052,10 +1052,6 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
             [self updateDrawerVisualStateForDrawerSide:visibleSide percentVisible:percentVisible];
             
             [self.centerContainerView setCenter:CGPointMake(CGRectGetMidX(newFrame), CGRectGetMidY(newFrame))];
-            
-            if (_callback) {
-                _callback(self.centerContainerView.frame);
-            }
             break;
         }
         case UIGestureRecognizerStateEnded:{
