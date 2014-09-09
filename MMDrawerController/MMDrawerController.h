@@ -109,6 +109,7 @@ typedef void (^MMDrawerControllerDrawerVisualStateBlock)(MMDrawerController * dr
 @property (nonatomic, strong) UIViewController * centerViewController;
 typedef void (^BBCenterContainerBlock)(CGRect frame);
 @property (nonatomic, copy)BBCenterContainerBlock callback;
+- (void)gathersCenterViewFrame;
 /**
  The left drawer view controller. 
  
