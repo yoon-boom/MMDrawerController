@@ -10,29 +10,29 @@
 	<string>MMDrawerControllerKitchenSink</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8B8C6644-CEAE-442D-8344-9315F86589DC</key>
-		<string>ssh://github.com/yoon-boom/MMDrawerController.git</string>
+		<key>BF2FE30DD30E807A424B26D63A15FEB4A29593EB</key>
+		<string>https://github.com/yoon-boom/MMDrawerController.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>KitchenSink/MMDrawerControllerKitchenSink.xcodeproj/project.xcworkspace</string>
+	<string>KitchenSink/MMDrawerControllerKitchenSink.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8B8C6644-CEAE-442D-8344-9315F86589DC</key>
+		<key>BF2FE30DD30E807A424B26D63A15FEB4A29593EB</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/yoon-boom/MMDrawerController.git</string>
+	<string>https://github.com/yoon-boom/MMDrawerController.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8B8C6644-CEAE-442D-8344-9315F86589DC</string>
+	<string>BF2FE30DD30E807A424B26D63A15FEB4A29593EB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8B8C6644-CEAE-442D-8344-9315F86589DC</string>
+			<string>BF2FE30DD30E807A424B26D63A15FEB4A29593EB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MMDrawerController</string>
 		</dict>
