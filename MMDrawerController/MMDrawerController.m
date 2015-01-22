@@ -697,11 +697,6 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
     [self.view setBackgroundColor:[UIColor blackColor]];
     
 	[self setupGestureRecognizers];
-    
-    UIView *leftBorderLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, self.view.bounds.size.height)];
-    [leftBorderLine setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
-    [leftBorderLine setBackgroundColor:[UIColor colorWithRed:169/255 green:169/255 blue:169/255 alpha:1]];
-    [self.centerContainerView addSubview:leftBorderLine];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
