@@ -93,10 +93,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
        self.openSide != MMDrawerSideNone){
         UINavigationBar * navBar = [self navigationBarContainedWithinSubviewsOfView:self];
         CGRect navBarFrame = [navBar convertRect:navBar.bounds toView:self];
-        if (self.centerInteractionMode == MMDrawerOpenCenterInteractionMode50PixelsNavigationBarForce) {
-            return hitView;
-        }
-        else if((self.centerInteractionMode == MMDrawerOpenCenterInteractionModeNavigationBarOnly &&
+        if((self.centerInteractionMode == MMDrawerOpenCenterInteractionModeNavigationBarOnly &&
            CGRectContainsPoint(navBarFrame, point) == NO) ||
            self.centerInteractionMode == MMDrawerOpenCenterInteractionModeNone){
             hitView = nil;
