@@ -90,6 +90,7 @@ typedef NS_ENUM(NSInteger, MMDrawerOpenCenterInteractionMode) {
     MMDrawerOpenCenterInteractionModeNone,
     MMDrawerOpenCenterInteractionModeFull,
     MMDrawerOpenCenterInteractionModeNavigationBarOnly,
+    MMDrawerOpenCenterInteractionMode50PixelsNavigationBarForce,
 };
 
 @class  MMDrawerController;
